@@ -1,4 +1,4 @@
-name: Peerawit-Onkaew-016  # ใส่ชื่อ-รหัสไว้ตรงนี้ เพื่อให้อาจารย์เห็นชัดๆ ในหน้า Actions
+name: พีรวิชญ์ อ่อนเเก้ว 016  # ใส่ชื่อภาษาไทยและรหัสท้ายของคุณตรงนี้ได้เลยครับ
 
 on:
   push:
@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ใช้แอกชันมาตรฐานของ GitHub เพื่อให้รันผ่านไม่เอเรอร์
-      - name: Checkout Code (Peerawit-Onkaew-016) 
+      # ตั้งชื่อขั้นตอนการทำ Checkout เป็นชื่อของคุณด้วยเช่นกันครับ
+      - name: Checkout Code by พีรวิชญ์ อ่อนเเก้ว 016
         uses: actions/checkout@v4
 
       - name: Upload Website Artifact

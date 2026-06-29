@@ -1,9 +1,8 @@
-name: Peerawit-Onkaew-016
+name: Peerawit-Onkaew-016  # ใส่ชื่อ-รหัสไว้ตรงนี้ เพื่อให้อาจารย์เห็นชัดๆ ในหน้า Actions
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -12,21 +11,17 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy by Peerawit-Onkaew-016
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Source Code
+      # ใช้แอกชันมาตรฐานของ GitHub เพื่อให้รันผ่านไม่เอเรอร์
+      - name: Checkout Code (Peerawit-Onkaew-016) 
         uses: actions/checkout@v4
 
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Website
+      - name: Upload Website Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
